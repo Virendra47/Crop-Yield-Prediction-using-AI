@@ -1,0 +1,32 @@
+[
+  {
+    "Username": "farmer_joe",
+    "Email": "joe@agri.com",
+    "PasswordHash": "a109e36947ad56de1dca1cc49f0ef8ac9ad9a7b1aa0df41fb3c4cb73c1ff01ea"
+  },
+  {
+    "Username": "viru",
+    "Email": "abc@gmail.com",
+    "PasswordHash": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f"
+  },
+  {
+    "Username": "test_farmer",
+    "Email": "test@farmer.com",
+    "PasswordHash": "a109e36947ad56de1dca1cc49f0ef8ac9ad9a7b1aa0df41fb3c4cb73c1ff01ea"
+  },
+  {
+    "Username": "atharav",
+    "Email": "ab@gmail.com",
+    "PasswordHash": "1718c24b10aeb8099e3fc44960ab6949ab76a267352459f203ea1036bec382c2"
+  },
+  {
+    "Username": "Virendra",
+    "Email": "abc@gmail.com",
+    "PasswordHash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
+  },
+  {
+    "Username": "Virendra_",
+    "Email": "abc@gmail.com",
+    "PasswordHash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
+  }
+]

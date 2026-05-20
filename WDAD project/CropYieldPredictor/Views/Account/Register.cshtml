@@ -1,0 +1,71 @@
+@model CropYieldPredictor.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Create Account";
+}
+
+<div class="d-flex justify-content-center align-items-center py-5" style="min-height: 80vh;">
+    <div class="agri-card shadow-lg" style="width: 100%; max-width: 450px;">
+        <div class="agri-card-header text-center position-relative">
+            <div class="text-center mb-3">
+                <img src="/images/logo.jpg" alt="CropPredict AI Logo" class="rounded-circle border border-success shadow-lg" style="height: 75px; width: 75px; object-fit: cover; box-shadow: 0 0 20px rgba(16, 185, 129, 0.35);">
+            </div>
+            <h2 class="text-white fw-extrabold mb-1"><i class="bi bi-person-plus-fill text-success me-2"></i>Sign Up</h2>
+            <p class="text-white-50 small">Create your AgriPredict Portal profile</p>
+        </div>
+
+        <form asp-action="Register" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger small mb-3 text-center"></div>
+
+            <!-- Username Field -->
+            <div class="mb-3">
+                <label asp-for="Username" class="form-label text-success fw-bold"></label>
+                <div class="input-group">
+                    <span class="input-group-text bg-dark border-success text-success"><i class="bi bi-person-fill"></i></span>
+                    <input asp-for="Username" class="form-control bg-dark text-white border-success" placeholder="Choose a username..." />
+                </div>
+                <span asp-validation-for="Username" class="text-danger small"></span>
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label text-success fw-bold"></label>
+                <div class="input-group">
+                    <span class="input-group-text bg-dark border-success text-success"><i class="bi bi-envelope-fill"></i></span>
+                    <input asp-for="Email" class="form-control bg-dark text-white border-success" placeholder="Enter email address..." />
+                </div>
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label text-success fw-bold"></label>
+                <div class="input-group">
+                    <span class="input-group-text bg-dark border-success text-success"><i class="bi bi-key-fill"></i></span>
+                    <input asp-for="Password" class="form-control bg-dark text-white border-success" placeholder="Create a password..." />
+                </div>
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="mb-4">
+                <label asp-for="ConfirmPassword" class="form-label text-success fw-bold"></label>
+                <div class="input-group">
+                    <span class="input-group-text bg-dark border-success text-success"><i class="bi bi-check-all"></i></span>
+                    <input asp-for="ConfirmPassword" class="form-control bg-dark text-white border-success" placeholder="Re-enter password..." />
+                </div>
+                <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+            </div>
+
+            <button type="submit" class="btn btn-agri w-100 py-2.5 mb-3"><i class="bi bi-person-check-fill me-1"></i>Create Account</button>
+
+            <div class="text-center text-white-50 small mt-3">
+                Already registered? <a asp-action="Login" class="text-success fw-bold text-decoration-none ms-1">Sign In Here</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
